@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>html5 dialog example: alternative to modal</title>
+  <style>
+    .html5dialog-container {
+      position: fixed;
+      bottom: 150px;
+      left: 0;
+      width: 80%;
+      max-width: 600px;
+      padding: 15px;
+      box-sizing: border-box;
+      z-index: 9999;
+    }
+
+
+    .html5dialog {
+      background-color: #c6ced6;
+      color: #0000008a;
+      border: none;
+
+      width: 80%;
+      border-radius: 5px;
+      box-shadow: -9px -11px 16px 3px rgb(190 195 217 / 41%);
+    }
+
+
+    .html5dialog h2 {
+      color: #343a40;
+      margin-top: 0;
+    }
+
+    .html5dialog p {
+      color: #6c757d;
+    }
+
+
+
+    .html5dialog:hover {
+      background-color: #dce6f0;
+      color: #d4e9ff;
+    }
+
+    .html5dialog button {
+      background-color: #383c41;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .html5dialog button:hover {
+      background-color: #0056b3;
+    }
+
+    .html5dialog-button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="html5dialog-container">
+    <dialog class="html5dialog" id="html5dialog" open>
+      <h2>Alternative to Modal</h2>
+      <p>Our message will show here</p>
+      <button onclick="dialogButton()">Button</button>
+    </dialog>
+  </div>
+
+  <script>
+    function dialogButton() {
+      document.getElementById('html5dialog').close();
+    }
+  </script>
+</body>
+
+</html>
